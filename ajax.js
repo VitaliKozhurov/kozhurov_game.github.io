@@ -97,8 +97,8 @@ function lockGetReady(callresult) {
       records.push({ name: playerName, score: playerScore }) // Имя и количество очков добавляем в массив
       // Отсортируем массив, чтобы отображать результат только 10 лучших игроков
       records.sort((x, y) => x.score - y.score).reverse();
-      if (records.length > 10) {
-         records = records.slice(0, 10)
+      if (records.length > 4) {
+         records = records.slice(0, 4)
       };
 
       showRecords(); // Обновляем таблицу
