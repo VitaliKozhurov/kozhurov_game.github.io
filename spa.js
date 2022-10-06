@@ -178,6 +178,7 @@ window.addEventListener('resize', () => {
       scoreDiv.style.display = 'none';
    }
    if (document.body.offsetWidth > document.body.offsetHeight) {
+      console.log(window.location.hash)
       infoDiv.style.display = 'none';
       if (gameIsStart) {
          playDiv.style.display = 'block';

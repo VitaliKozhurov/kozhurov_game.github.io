@@ -386,7 +386,6 @@ function tick() {
       winDiv.style.display = 'flex';
       winInfo.textContent += `Количество очков, заработанных Вами: ${score}`;
    }
-   /* console.log(enemys[1].frame) */
    // Событие проигрыша
    if (player.posY > canvas.height || health.length === 0) {
       audioLoose();
@@ -410,7 +409,7 @@ function tick() {
    } else cancelAnimationFrame(anim)
 }
 
-//=======УПРАВЛЕНИЕ========//
+// ======= УПРАВЛЕНИЕ ======== //
 function keyDown(eo) {
    eo = eo || window.Event;
    if ((eo.code === 'KeyD' || eo.code === 'ArrowRight')) {

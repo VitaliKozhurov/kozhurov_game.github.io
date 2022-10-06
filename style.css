@@ -153,8 +153,8 @@ body {
    }
 
    .game_nav li {
-      padding: 10px;
-      margin-bottom: 20px;
+      padding: 8px;
+      margin-bottom: 15px;
    }
 
    #div_name {
@@ -168,6 +168,7 @@ body {
    #rules {
       font-size: 20px;
       left: 270px;
+      padding: 15px;
    }
 
    #records {
