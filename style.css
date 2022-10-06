@@ -166,7 +166,7 @@ body {
    }
 
    #rules {
-      font-size: 20px;
+      font-size: 18px;
       left: 270px;
       padding: 15px;
    }
@@ -221,10 +221,12 @@ body {
 
    #rules {
       left: 210px;
+      font-size: 14px;
    }
 
    #records {
       left: 210px;
+
    }
 }
 
