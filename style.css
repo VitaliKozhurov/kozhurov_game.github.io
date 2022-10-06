@@ -159,6 +159,7 @@ body {
 
    #div_name {
       left: 300px;
+      padding: 15px;
    }
 
    #userName {
@@ -168,7 +169,7 @@ body {
    #rules {
       font-size: 18px;
       left: 270px;
-      padding: 15px;
+      padding: 10px;
    }
 
    #records {
@@ -181,13 +182,8 @@ body {
       padding: 40px 20px;
    }
 
-   #div_name {
-      padding: 15px;
-   }
-
    #rules {
       font-size: 16px;
-      padding: 10px;
       margin-right: 20px;
    }
 
