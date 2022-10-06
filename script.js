@@ -525,7 +525,7 @@ function handleTouchEnd(eo) {
    eo.preventDefault();
    document.removeEventListener('touchmove', handleTouchMove);
    statePerson.moveUp = false;
-   statePerson.moveRight = false;
+   /* statePerson.moveRight = false; */
 }
 
 // Функция, которая "активирует" управление, в зависимости от состояния игры
