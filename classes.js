@@ -120,18 +120,19 @@ class Enemy {
       this.fireWidth = 2 * playerW; // Ширина изображения взрыва
       this.fireHeight = 2 * playerH; // Высота изображения взрыва
       this.destroyState = false; // Статус врага
+      this.moveRight = true;
    }
    // Анимация движения врага через установку интервала
    animation() {
       // Запуск таймера для движения врага
       enemyTimer = setInterval(() => {
-         if (!stateEnemy.moveRight) {
+         if (!this.moveRight) {
             this.frame++;
             if (this.frame > 9) {
                this.frame = 0;
             }
          }
-         if (stateEnemy.moveRight) {
+         if (this.moveRight) {
             this.frame--;
             if (this.frame < 0) {
                this.frame = 9;

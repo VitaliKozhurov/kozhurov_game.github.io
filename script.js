@@ -57,7 +57,6 @@ const statePerson = {
 }
 // Объект состояния врага
 const stateEnemy = {
-   moveRight: true,
    animation: false,
 }
 
@@ -215,14 +214,12 @@ function tick() {
    for (i = 0; i < enemys.length; i++) {
       if (enemys[i].posX + enemys[i].width >= platforms[2 * i + 1].posX + platforms[2 * i + 1].width) {
          enemys[i].speedX = -enemys[i].speedX;
-         stateEnemy.moveRight = false;
+         enemys[i].moveRight = false;
          enemys[i].currImage = enemys[i].imageEnemyML;  // Смена картинки на другую, направление движения
-         enemys[i].frame = 0;
       } else if (enemys[i].posX <= platforms[2 * i + 1].posX) {
          enemys[i].speedX = -enemys[i].speedX;
-         stateEnemy.moveRight = true;
+         enemys[i].moveRight = true;
          enemys[i].currImage = enemys[i].imageEnemyMR;  // Смена картинки на другую, направление движения
-         enemys[i].frame = 9;
       }
    }
    // Описываем  реакцию на столкновение с противником
@@ -566,4 +563,5 @@ function stopGame() {
    arrowRight = null;
    arrowLeft = null;
    target = null;
+   spikes = null;
 }
