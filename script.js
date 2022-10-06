@@ -382,6 +382,7 @@ function tick() {
       audioWin();
       winDiv.style.display = 'flex';
       winInfo.textContent += `Количество очков, заработанных Вами: ${score}`;
+      return
    }
    // Событие проигрыша
    if (player.posY > canvas.height || health.length === 0) {
@@ -400,6 +401,8 @@ function tick() {
       player.currImage = player.imageMR
       player.frameFirstLine = 3;
       player.frameSecondLine = 0;
+      bulletsL.length = 0; // Обнуляем снаряды, чтобы после смерти персонажа они не летали 
+      bulletsR.length = 0;
    }
    if (!gameIsEnd) {
       anim = requestAnimationFrame(tick);
