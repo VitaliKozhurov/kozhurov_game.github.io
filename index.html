@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet">
+   <title>Game</title>
+</head>
+
+<body style="position: relative;">
+   <div id="info"><span>Пожалуйста
+         поверните Ваше устройство</span>
+      <br><br>
+      Наше приложение не поддерживает портретную ориентацию. Пожалуста установите альбомную ориентацию Вашего
+      устройства, для наилучшей работы.
+   </div>
+   <div id='main'>
+      <ul class=" game_nav">
+         <li id="mainPage">ГЛАВНАЯ</li>
+         <li id="gamePage">ИГРАТЬ</li>
+         <li id="rulesPage">ПРАВИЛА</li>
+         <li id="scorePage">РЕКОРДЫ</li>
+      </ul>
+   </div>
+   <div id="div_name">Добро пожаловать в нашу игру <br><br>
+      Для начала игры введите Ваше имя
+      <input id="userName" type="text">
+   </div>
+   <div id="game">
+      <canvas id="canvas"></canvas>
+   </div>
+   <div id="rules">
+      Цель игры как можно быстрее пройти дистанцию, при этом уничтожив всех противников, и собрав все бонусы. В начале
+      игры игроку дается 3 жизни, потратив которые или упав в пропасть игра заканчивается.
+      Управление игроком осуществляется через кнопки A, W, D, либо через стрелки. Для выстрела необходимо нажать Space.
+      Управление на телефоне или планшете интуитивно понятное.
+   </div>
+   <div id="records"></div>
+   <div id="win"><span id="close_window">X</span><span id="win_info">Поздравляем, Вы выйграли!!! <br></span></div>
+   <script src="https://fe.it-academy.by/JQ/jquery.js"></script>
+   <script src="media.js"></script>
+   <script src="ajax.js"></script>
+   <script src="classes.js"></script>
+   <script src="script.js"></script>
+   <script src="spa.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+ul li {
+   list-style: none;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 32px;
+   line-height: 1;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+   overflow: hidden;
+   font-family: 'Permanent Marker', cursive;
+   color: rgb(44, 4, 43);
+}
+
+#main {
+   width: 100%;
+   height: 100%;
+   background: url('img/bg.jpg') no-repeat;
+   background-size: cover;
+}
+
+.game_nav {
+   width: 200px;
+   margin-left: 40px;
+   font-family: 'Permanent Marker', cursive;
+   font-weight: 700;
+   padding: 40px;
+}
+
+.game_nav li {
+   text-align: center;
+   margin-bottom: 40px;
+   padding: 20px;
+   cursor: pointer;
+   border: solid 4px rgb(44, 4, 43);
+   border-radius: 15px;
+   transition: 0.3s ease;
+}
+
+.game_nav li:hover {
+   scale: 1.1;
+}
+
+#rules {
+   position: absolute;
+   left: 400px;
+   top: 40px;
+   border: solid 4px rgb(44, 4, 43);
+   border-radius: 15px;
+   padding: 30px;
+   margin-right: 50px;
+   line-height: 1.3;
+   text-align: justify;
+}
+
+#records {
+   position: absolute;
+   left: 400px;
+   top: 40px;
+   border: solid 4px rgb(44, 4, 43);
+   border-radius: 15px;
+   padding: 30px;
+   margin-right: 50px;
+   line-height: 1.3;
+   text-align: justify;
+}
+
+#div_name {
+   text-align: center;
+   position: absolute;
+   left: 400px;
+   top: 40px;
+   border: solid 4px rgb(44, 4, 43);
+   border-radius: 15px;
+   padding: 30px;
+   margin-right: 20px;
+}
+
+#userName {
+   display: block;
+   margin: 20px auto;
+   border: solid 4px rgb(44, 4, 43);
+   background: transparent;
+   font-size: 28px;
+   text-align: center;
+   padding: 10px;
+   color: rgb(44, 4, 43);
+}
+
+#info {
+   background-color: rgb(53, 163, 227);
+   display: none;
+   width: 100%;
+   height: 100%;
+   margin: 0 auto;
+   text-align: center;
+   padding-top: 50%;
+   color: white;
+   font-family: 'Arial', serif;
+   line-height: 1.4;
+}
+
+#info span {
+   font-weight: 800;
+}
+
+#win {
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-color: #252839;
+   width: 100%;
+   height: 100%;
+   font-family: 'Arial', serif;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   line-height: 1.5;
+   color: #ffdd1c;
+}
+
+#win_info {
+   font-size: 32px;
+   font-weight: 700;
+}
+
+#close_window {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   font-size: 32px;
+   cursor: pointer;
+}
+
+@media (max-width: 920px) {
+   body {
+      font-size: 24px;
+   }
+
+   .game_nav {
+      margin-left: 0px;
+   }
+
+   .game_nav li {
+      padding: 10px;
+      margin-bottom: 20px;
+   }
+
+   #div_name {
+      left: 300px;
+   }
+
+   #userName {
+      font-size: 20px;
+   }
+
+   #rules {
+      font-size: 20px;
+      left: 270px;
+   }
+
+   #records {
+      left: 350px;
+   }
+}
+
+@media (max-width: 768px) {
+   .game_nav {
+      padding: 40px 20px;
+   }
+
+   #div_name {
+      padding: 20px;
+   }
+
+   #rules {
+      font-size: 16px;
+      padding: 15px;
+      margin-right: 20px;
+   }
+
+   #records {
+      left: 300px;
+      padding: 15px 30px;
+   }
+
+   #userName {
+      font-size: 16px;
+      padding: 5px;
+   }
+}
+
+@media (max-width: 620px) {
+   .game_nav {
+      padding: 40px 20px;
+   }
+
+   .game_nav li {
+      padding: 5px;
+      font-size: 20px;
+      width: 150px;
+   }
+
+   #div_name {
+      left: 210px;
+      padding: 20px;
+   }
+
+   #rules {
+      left: 210px;
+   }
+
+   #records {
+      left: 210px;
+   }
+}
+
+@media (max-width: 540px) {
+   #div_name {
+      font-size: 18px;
+   }
+}
