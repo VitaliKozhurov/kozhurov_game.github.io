@@ -179,10 +179,11 @@ window.addEventListener('resize', () => {
       scoreDiv.style.display = 'none';
    }
    if (document.body.offsetWidth > document.body.offsetHeight) {
+      console.log('message')
       infoDiv.style.display = 'none';
       if (gameIsStart) {
          playDiv.style.display = 'block';
-      } else if (location.hash === '#Main') {
+      } else if (location.hash === '#Main' || location.hash === '') {
          mainDiv.style.display = 'block';
          nameDiv.style.display = 'block';
       } else if (location.hash === '#Rules') {
@@ -194,7 +195,7 @@ window.addEventListener('resize', () => {
       }
    }
 })
-
+// Соытие при возврате во время игры
 function back() {
    closeGame = confirm('В случае ухода со страницы Вы прекратите игровой процесс')
    if (closeGame) {
