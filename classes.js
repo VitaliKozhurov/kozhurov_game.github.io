@@ -193,6 +193,9 @@ class Bullets {
       if (this.posX < 0) {
          bulletsL.shift()
       }
+      if (statePerson.moveRight) {
+         this.posX -= 7 - platformSpeed;
+      }
       this.posX -= 7;
       context.drawImage(this.imageBall, 0, 0, 800, 800, this.posX, this.posY, heightScr / 30, heightScr / 30);
    }
