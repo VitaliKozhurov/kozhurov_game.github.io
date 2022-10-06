@@ -482,7 +482,6 @@ function touchUp(eo) {
    eo = eo || window.Event;
    eo.preventDefault();
    if (eo && !statePerson.moveUp) {
-      console.log('message')
       statePerson.moveRight = false;
       statePerson.moveLeft = false;
    }
