@@ -382,7 +382,6 @@ function tick() {
       audioWin();
       winDiv.style.display = 'flex';
       winInfo.textContent += `Количество очков, заработанных Вами: ${score}`;
-      userName.value = '';
       return
    }
    // Событие проигрыша
