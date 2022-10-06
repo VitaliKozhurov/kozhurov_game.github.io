@@ -13,7 +13,7 @@ if (document.body.offsetWidth > document.body.offsetHeight) {
 
 const playerSpeedX = 8; // Скорость персонажа по оси X
 const playerSpeedXMob = 4; // Скорость персонажа для мобильных устройств
-const moveLeftLim = widthScr / 25; // Ограничение по движению влево для персонажа
+let moveLeftLim = widthScr > 920 ? widthScr / 25 : widthScr / 10; // Ограничение по движению влево для персонажа
 const platformSpeed = 6; // Скорость движения платформы
 const platformSpeedMob = 4; // Скорость движения платформы для моб. устройств
 let progressX = 0; // Переменная, в которую будем записывать пройденную дистанцию персонажа, чтобы отслеживать конец игры
