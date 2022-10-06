@@ -15,7 +15,7 @@ const playerSpeedX = 8; // Скорость персонажа по оси X
 const playerSpeedXMob = 4; // Скорость персонажа для мобильных устройств
 let moveLeftLim = widthScr > 920 ? widthScr / 25 : widthScr / 10; // Ограничение по движению влево для персонажа
 const platformSpeed = 6; // Скорость движения платформы
-const platformSpeedMob = 3.5; // Скорость движения платформы для моб. устройств
+const platformSpeedMob = 4; // Скорость движения платформы для моб. устройств
 let progressX = 0; // Переменная, в которую будем записывать пройденную дистанцию персонажа, чтобы отслеживать конец игры
 let scoreX = 0; // Переменная для очков
 let score;
