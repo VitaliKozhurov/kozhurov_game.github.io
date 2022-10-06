@@ -37,12 +37,7 @@ function switchToStateFromURLHash() {
          rulesDiv.style.display = 'none';
          scoreDiv.style.display = 'none';
          if (gameIsStart) {
-            closeGame = confirm('В случае ухода со страницы Вы прекратите игровой процесс')
-            if (closeGame) {
-               cancelAnimationFrame(anim);
-               stopGame();
-               gameIsStart = false;
-            } else switchToState({ pagename: 'Game' });
+            back();
          }
          break;
       case 'Game':
@@ -62,6 +57,9 @@ function switchToStateFromURLHash() {
          playDiv.style.display = 'none';
          rulesDiv.style.display = 'block';
          scoreDiv.style.display = 'none';
+         if (gameIsStart) {
+            back();
+         }
          break;
       case 'Records':
          refreshTable(); // Обновляем таблицу рекордов
@@ -70,6 +68,9 @@ function switchToStateFromURLHash() {
          playDiv.style.display = 'none';
          rulesDiv.style.display = 'none';
          scoreDiv.style.display = 'block';
+         if (gameIsStart) {
+            back();
+         }
          break;
    }
 }
@@ -193,3 +194,12 @@ window.addEventListener('resize', () => {
       }
    }
 })
+
+function back() {
+   closeGame = confirm('В случае ухода со страницы Вы прекратите игровой процесс')
+   if (closeGame) {
+      cancelAnimationFrame(anim);
+      stopGame();
+      gameIsStart = false;
+   } else switchToState({ pagename: 'Game' });
+}

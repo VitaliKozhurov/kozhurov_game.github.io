@@ -1,4 +1,4 @@
-const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php"; // указываем URL сервиса к которому будем обращаться
+const ajaxHandlerScript = "https://fe.it-academy.by/AjaxStringStorage2.php"; // указываем URL сервера к которому будем обращаться
 let records; // Переменная в которой будут массив с таблицей рекордов
 let updatePassword; // Переменная в которой будем хранить пароль для блокирования строки на момент её изменения
 const stringName = 'KOZHUROV_GAME_TABLEOFRECORDS'; // Указываем имя по которому будем обращаться к базе данных
@@ -42,7 +42,7 @@ function showRecords() {
    }
    document.getElementById('records').innerHTML = str;
 }
-// Функция, которая защищает от ввода тегов
+// Функция, которая защищает от ввода символов, которые могут определиться как теги
 function escapeHTML(text) {
    if (!text)
       return text;
@@ -54,7 +54,7 @@ function escapeHTML(text) {
       .split("'").join("&#039;");
    return text;
 }
-
+// Функция, которая изменяет таблицу рекордов
 function changeTable() {
    updatePassword = Math.random(); // Получаем специальный пароль
    $.ajax({
@@ -78,7 +78,7 @@ function lockGetReady(callresult) {
    else {
       records = [];
       if (callresult.result != "") {
-         records = JSON.parse(callresult.result);
+         records = [] /* JSON.parse(callresult.result); */
          // вдруг кто-то сохранил мусор?
          if (!Array.isArray(records))
             records = [];
@@ -88,10 +88,10 @@ function lockGetReady(callresult) {
       // проверка, если набрано больше очков чем ранее, то перезаписываем результат, если нет, то ничего не делаем
       for (let i = 0; i < records.length; i++) {
          const record = records[i];
-         if (record.name === playerName && record.score < playerScore) {
-            records.splice(records.indexOf(record), 1)
-         } else if (record.name === playerName && record.score >= playerScore) {
+         if (record.name === playerName && record.score >= playerScore) {
             return
+         } else if (record.name === playerName && record.score < playerScore) {
+            records.splice(records.indexOf(record), 1)
          }
       }
       records.push({ name: playerName, score: playerScore }) // Имя и количество очков добавляем в массив
