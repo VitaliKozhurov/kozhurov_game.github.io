@@ -158,14 +158,15 @@ closeWin.addEventListener('touchstart', () => {
 switchToStateFromURLHash();
 
 // Описываем поведение окна браузера при ресайзе, случай, когда ширина меньше высоты
-if (document.body.offsetWidth < document.body.offsetHeight) {
+/* if (document.body.offsetWidth < document.body.offsetHeight) {
    infoDiv.style.display = 'block';
    mainDiv.style.display = 'none';
    playDiv.style.display = 'none';
    rulesDiv.style.display = 'none';
    nameDiv.style.display = 'none';
    scoreDiv.style.display = 'none';
-}
+} */ // !!!!!
+
 // Описываем поведение, в случае если ориентация устройства портретная, для удобства, необходимо только альбомная ориентация
 window.addEventListener('resize', () => {
    if (document.body.offsetWidth < document.body.offsetHeight) {

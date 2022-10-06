@@ -485,7 +485,8 @@ function touchDown(eo) {
 function touchUp(eo) {
    eo = eo || window.Event;
    eo.preventDefault();
-   if (eo) {
+   //!!!!!!
+   if (eo && !statePerson.moveUp) {
       statePerson.moveRight = false;
       statePerson.moveLeft = false;
    }
