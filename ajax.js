@@ -78,7 +78,7 @@ function lockGetReady(callresult) {
    else {
       records = [];
       if (callresult.result != "") {
-         records = [] /* JSON.parse(callresult.result); */
+         records = JSON.parse(callresult.result);
          // вдруг кто-то сохранил мусор?
          if (!Array.isArray(records))
             records = [];
